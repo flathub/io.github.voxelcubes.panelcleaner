@@ -21,17 +21,17 @@ modules:
     sources:
         # tag: '2.1.4'
       - type: file
-        url: https://files.pythonhosted.org/packages/0e/b8/51277f2adceb29f6a606c3dcbe6ab5cf55a7a8fc93e53d1246a510faff31/pcleaner-2.1.4-py3-none-any.whl
-        sha256: ab1951a153b7dd6f22567646a08af3dc0bc1509ce69027d54d1153871c41778c
+        url: https://files.pythonhosted.org/packages/0f/26/3a11e0e65223c09f1bc8b744f5609d63a25ec698d663d86bbebc7baf53b0/pcleaner-2.2.0-py3-none-any.whl
+        sha256: d8eb3ee99b59a0e8efccce1aa19e3e0cf18f975bbb2efe256ebfbfd36765c0f8
       - type: file
-        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/03499c608438cb7a67e7655536488cf120bf3d35/PanelCleaner.desktop
+        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/d8fddfc0d5200cf50328c3457653d8331d8ba61d/PanelCleaner.desktop
         sha256: 8339f19cd19c12ca8a2446087289807695b91dd47ccdeee26d1d88d2caab9039 
       - type: file
-        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/03499c608438cb7a67e7655536488cf120bf3d35/icons/logo-big.png
-        sha256: e59c081a068ece023bdae0e44615ad375f15d67a88fd308467c64d599748a7c9
+        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/d8fddfc0d5200cf50328c3457653d8331d8ba61d/icons/logo-big.png
+        sha256: 6857751309097eee458ff23181295eabfb1295606df8050f5ce1a9fd4560ec04
       - type: file
-        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/03499c608438cb7a67e7655536488cf120bf3d35/flatpak/io.github.voxelcubes.panelcleaner.appdata.xml
-        sha256: 60b78f99fef3fbcc11ad1f698480974ed9d06045f4cff64f95c6de4952cf10ad
+        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/d8fddfc0d5200cf50328c3457653d8331d8ba61d/flatpak/io.github.voxelcubes.panelcleaner.appdata.xml
+        sha256: 87ab61994641e88e06db831d978df9b345077797c36c6b5b83497cc2df9c8630
     post-install:
       - install -Dm644 PanelCleaner.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 logo-big.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
