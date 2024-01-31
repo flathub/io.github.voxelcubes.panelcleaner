@@ -22,3 +22,6 @@ lint:
 
 clean:
 	rm -rf builddir repo panelcleaner.flatpak .flatpak-builder
+
+introspect:
+	flatpak run --command=sh --devel $(ID)
