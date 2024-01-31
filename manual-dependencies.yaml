@@ -9,8 +9,8 @@ modules:
         --prefix=${FLATPAK_DEST} "torch" --no-build-isolation
     sources:
       - type: file
-        url: https://download.pytorch.org/whl/cpu-cxx11-abi/torch-2.1.0%2Bcpu.cxx11.abi-cp311-cp311-linux_x86_64.whl
-        sha256: 0aafe9ff268e209831d38acd3e0b39a95ae76ff45a88ec0e48d7019cf476dc21
+        url: https://download.pytorch.org/whl/cpu/torch-2.2.0%2Bcpu-cp311-cp311-linux_x86_64.whl
+        sha256: 2a8ff4440c1f024ad7982018c378470d2ae0a72f2bc269a22b1a677e09bdd3b1
   - name: python3-torchvision
     buildsystem: simple
     build-commands:
@@ -18,8 +18,8 @@ modules:
         --prefix=${FLATPAK_DEST} "torchvision" --no-build-isolation
     sources:
       - type: file
-        url: https://download.pytorch.org/whl/cpu/torchvision-0.16.0%2Bcpu-cp311-cp311-linux_x86_64.whl
-        sha256: be317c0b0b32d008309a1de6018e77b500d1cf966e158a5db1070da5c0cfea88
+        url: https://download.pytorch.org/whl/cpu/torchvision-0.17.0%2Bcpu-cp311-cp311-linux_x86_64.whl
+        sha256: 701d7fcfdd8ed206dcb71774190152f0a2d6c999ad7cee277fc5a71a943ae64d
   - name: python3-manga-ocr
     buildsystem: simple
     build-commands:
