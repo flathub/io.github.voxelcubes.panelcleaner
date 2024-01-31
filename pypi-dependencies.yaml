@@ -49,8 +49,8 @@ modules:
     sources:
       - *id001
       - type: file
-        url: https://files.pythonhosted.org/packages/6b/d4/d62ce38ba00dc67d7ec4ec5cc19d36958d8ed70e63778715ad626bcbc796/scipy-1.11.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-        sha256: 530f9ad26440e85766509dbf78edcfe13ffd0ab7fec2560ee5c36ff74d6269ff
+        url: https://files.pythonhosted.org/packages/d4/b8/7169935f9a2ea9e274ad8c21d6133d492079e6ebc3fc69a915c2375616b0/scipy-1.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: 8b8066bce124ee5531d12a74b617d9ac0ea59245246410e19bca549656d9a40a
   - name: python3-pyclipper
     buildsystem: simple
     build-commands:
@@ -133,8 +133,8 @@ modules:
         url: https://files.pythonhosted.org/packages/70/25/fab23259a52ece5670dcb8452e1af34b89e6135ecc17cd4b54b4b479eac6/fsspec-2023.12.2-py3-none-any.whl
         sha256: d800d87f72189a745fa3d6b033b9dc4a34ad069f60ca60b943a63599f5501960
       - type: file
-        url: https://files.pythonhosted.org/packages/3d/0a/aed3253a9ce63d9c90829b1d36bc44ad966499ff4f5827309099c8c9184b/huggingface_hub-0.20.2-py3-none-any.whl
-        sha256: 53752eda2239d30a470c307a61cf9adcf136bc77b0a734338c7d04941af560d8
+        url: https://files.pythonhosted.org/packages/28/03/7d3c7153113ec59cfb31e3b8ee773f5f420a0dd7d26d40442542b96675c3/huggingface_hub-0.20.3-py3-none-any.whl
+        sha256: d988ae4f00d3e307b0c80c6a05ca6dbb7edba8bba3079f74cda7d9c2e562a7b6
       - &id005
         type: file
         url: https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl
@@ -151,22 +151,22 @@ modules:
         url: https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl
         sha256: 58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f
       - type: file
-        url: https://files.pythonhosted.org/packages/be/49/985429e1d1915df64d01603abae3c0c2e7deb77fd9c5d460768ad626ff84/safetensors-0.4.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-        sha256: e9c80ce0001efa16066358d2dd77993adc25f5a6c61850e4ad096a2232930bce
+        url: https://files.pythonhosted.org/packages/8e/cf/b32d236cc01429bf2827bd1d8d81fa5a34a6cc7fb3499506f5d1aa19dcb8/safetensors-0.4.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: 02697f8f2be8ca3c37a4958702dbdb1864447ef765e18b5328a1617022dcf164
       - type: file
-        url: https://files.pythonhosted.org/packages/15/3b/879231a9a80e52a2bd0fcfc7167d5fa31324463a6063f04b5945667a8231/tokenizers-0.15.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-        sha256: 0344d6602740e44054a9e5bbe9775a5e149c4dddaff15959bb07dcce95a5a859
+        url: https://files.pythonhosted.org/packages/3c/33/9b6dbae3f7f1e25d6bf06cd511d4cd9694c805465aafbceb77f306f7826d/tokenizers-0.15.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: f49068cf51f49c231067f1a8c9fc075ff960573f6b2a956e8e1b0154fb638ea5
       - *id002
       - type: file
-        url: https://files.pythonhosted.org/packages/20/0a/739426a81f7635b422fbe6cb8d1d99d1235579a6ac8024c13d743efa6847/transformers-4.36.2-py3-none-any.whl
-        sha256: 462066c4f74ee52516f12890dcc9ec71d1a5e97998db621668455117a54330f6
+        url: https://files.pythonhosted.org/packages/85/f6/c5065913119c41ecad148c34e3a861f719e16b89a522287213698da911fc/transformers-4.37.2-py3-none-any.whl
+        sha256: 595a8b12a1fcc4ad0ced49ce206c58e17be68c85d7aee3d7546d04a32c910d2e
       - type: file
         url: https://files.pythonhosted.org/packages/b7/f4/6a90020cd2d93349b442bfcb657d0dc91eee65491600b2cb1d388bc98e6b/typing_extensions-4.9.0-py3-none-any.whl
         sha256: af72aea155e91adfc61c3ae9e0e342dbc0cba726d6cba4b6c72c1f34e47291cd
       - &id007
         type: file
-        url: https://files.pythonhosted.org/packages/96/94/c31f58c7a7f470d5665935262ebd7455c7e4c7782eb525658d3dbf4b9403/urllib3-2.1.0-py3-none-any.whl
-        sha256: 55901e917a5896a349ff771be919f8bd99aff50b79fe58fec595eb37bbc56bb3
+        url: https://files.pythonhosted.org/packages/88/75/311454fd3317aefe18415f04568edc20218453b709c63c58b9292c71be17/urllib3-2.2.0-py3-none-any.whl
+        sha256: ce3711610ddce217e6d113a2732fafad960a03fd0318c91faa79481e35c11224
   - name: python3-loguru
     buildsystem: simple
     build-commands:
@@ -243,8 +243,8 @@ modules:
     sources:
       - *id001
       - type: file
-        url: https://files.pythonhosted.org/packages/54/a4/569fc717831969cf48bced350bdaf070cdeab06918d179429899e144358d/tifffile-2023.12.9-py3-none-any.whl
-        sha256: 9b066e4b1a900891ea42ffd33dab8ba34c537935618b9893ddef42d7d422692f
+        url: https://files.pythonhosted.org/packages/16/09/b9f5e4f9448fd39b7c0c9cbb592409ab28e90a1913795260b975d8424cde/tifffile-2024.1.30-py3-none-any.whl
+        sha256: 40cb48f661acdfea16cb00dc8941bd642b8eb5c59bca6de6a54091bee9ee2699
   - name: python3-attrs
     buildsystem: simple
     build-commands:
@@ -307,11 +307,11 @@ modules:
         --prefix=${FLATPAK_DEST} "jinja2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl
-        sha256: 6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61
+        url: https://files.pythonhosted.org/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl
+        sha256: 7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa
       - type: file
-        url: https://files.pythonhosted.org/packages/fe/21/2eff1de472ca6c99ec3993eab11308787b9879af9ca8bbceb4868cf4f2ca/MarkupSafe-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-        sha256: bfce63a9e7834b12b87c64d6b155fdd9b3b96191b6bd334bf37db7ff1fe457f2
+        url: https://files.pythonhosted.org/packages/d3/0a/c6dfffacc5a9a17c97019cb7cbec67e5abfb65c59a58ecba270fa224f88d/MarkupSafe-2.1.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: 3ab3a886a237f6e9c9f4f7d272067e712cdb4efa774bef494dccad08f39d8ae6
   - name: python3-fsspec
     buildsystem: simple
     build-commands:
@@ -326,8 +326,8 @@ modules:
         --prefix=${FLATPAK_DEST} "psutil" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/be/fa/f1f626620e3b47e6237dcc64cb8cc1472f139e99422e5b9fa5bbcf457f48/psutil-5.9.7-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-        sha256: fe8b7f07948f1304497ce4f4684881250cd859b16d06a1dc4d7941eeb6233bfe
+        url: https://files.pythonhosted.org/packages/c5/4f/0e22aaa246f96d6ac87fe5ebb9c5a693fbe8877f537a1022527c47ca43c5/psutil-5.9.8-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: d06016f7f8625a1825ba3732081d77c94589dca78b7a3fc072194851e88461a4
   - name: python3-pyyaml
     buildsystem: simple
     build-commands:
