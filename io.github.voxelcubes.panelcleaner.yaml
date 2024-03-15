@@ -19,10 +19,10 @@ modules:
       - pip3 install --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} pcleaner --no-build-isolation
       - desktop-file-edit --set-icon=${FLATPAK_ID} PanelCleaner.desktop
     sources:
-        # tag: '2.6.0'
+        # tag: '2.6.1'
       - type: file
-        url: https://files.pythonhosted.org/packages/00/4d/71622acf287f86321ef2009d4e206274b238da0d7c0d19d483def7b655c7/pcleaner-2.6.0-py3-none-any.whl
-        sha256: d865b2eeff49ed68117489195d8154d5de9cc2ebe7b4ee92fd6ab6e743d6e5bf
+        url: https://files.pythonhosted.org/packages/05/22/dc42de96d64ac82c13a5e4c44f078aed33fcb93c55dd08769a1fa514447f/pcleaner-2.6.1-py3-none-any.whl
+        sha256: 8b9ac7948f86283fa443e396d983f0a00d8a06ad4d66f764f2301be03bf05b87
       - type: file
         url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/ddea3ad4910a00360f320a89a5d91259bb29618a/PanelCleaner.desktop
         sha256: 8339f19cd19c12ca8a2446087289807695b91dd47ccdeee26d1d88d2caab9039 
@@ -30,8 +30,8 @@ modules:
         url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/ddea3ad4910a00360f320a89a5d91259bb29618a/icons/logo-big.png
         sha256: 6857751309097eee458ff23181295eabfb1295606df8050f5ce1a9fd4560ec04
       - type: file
-        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/4d8ad97c364865d2e05bdddf082c2be889f55925/flatpak/io.github.voxelcubes.panelcleaner.appdata.xml
-        sha256: d042fcbc9cc056dda7cfd6b14fc652d3f055b1af82c2713495d9dd96be8b0ec7
+        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/72f442482cb0869d62046abae82475036f52f9fd/flatpak/io.github.voxelcubes.panelcleaner.appdata.xml
+        sha256: 2f5fbe6712c197699402faf4207e77c1c77a0a935806493768b402d9b6d76736
     post-install:
       - install -Dm644 PanelCleaner.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 logo-big.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
