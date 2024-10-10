@@ -1,7 +1,17 @@
-# Generated with flatpak-pip-generator --runtime=org.freedesktop.Sdk//23.08 --yaml --output pypi-dependencies --requirements-file=requirements.txt
+# Generated with flatpak-pip-generator --runtime=org.kde.Sdk//6.7 --yaml --output pypi-dependencies --requirements-file=requirements.txt
 build-commands: []
 buildsystem: simple
 modules:
+  - name: python3-aggdraw
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "aggdraw==1.3.19" --no-build-isolation
+    sources:
+      - &id010
+        type: file
+        url: https://files.pythonhosted.org/packages/e0/d4/67f8f43db650ae54768ebbd5fa8a6327a985e59761e399fea92f0902bc9f/aggdraw-1.3.19-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: b5c47a5a4c9d1e0902b90b8b0032db55c8dc041dfc5005ff02749d8e9c0aa622
   - name: python3-altgraph
     buildsystem: simple
     build-commands:
@@ -17,7 +27,8 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "attrs==23.2.0" --no-build-isolation
     sources:
-      - type: file
+      - &id011
+        type: file
         url: https://files.pythonhosted.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl
         sha256: 99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1
   - name: python3-certifi
@@ -92,11 +103,10 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "fire==0.5.0" --no-build-isolation
     sources:
-      - &id016
-        type: file
+      - type: file
         url: https://files.pythonhosted.org/packages/94/ed/3b9a10605163f48517931083aee8364d4d6d3bb1aa9b75eb0a4a5e9fbfc1/fire-0.5.0.tar.gz
         sha256: a6b0d49e98c8963910021f92bba66f65ab440da2982b78eb1bbf95a0a34aacc6
-      - &id021
+      - &id025
         type: file
         url: https://files.pythonhosted.org/packages/d9/5f/8c716e47b3a50cbd7c146f45881e11d9414def768b7cd9c5e6650ec2a80a/termcolor-2.4.0-py3-none-any.whl
         sha256: 9297c0df9c99445c2412e832e882a7884038a25617c60cea2ad69488d4040d63
@@ -114,18 +124,18 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "fugashi==1.3.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "fugashi==1.3.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/f3/27/939cf07c4b4fbeb52404d30244ce9166ae9da123d1987640b1dfc839beea/fugashi-1.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-        sha256: 96437109c407d1f6b47535767c8439be7c4a5f8859213ba25b042145dcbda405
+        url: https://files.pythonhosted.org/packages/da/34/9bdacf323e4b5d8e796c111c9e9035434527e445e777635df6fca6a5bfe9/fugashi-1.3.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: 604384288272a94b8a74e06665e2042fa83b392ccbc3a894491a99127c1b84ec
   - name: python3-huggingface-hub
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "huggingface-hub==0.21.3" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "huggingface-hub==0.21.4" --no-build-isolation
     sources:
-      - &id012
+      - &id018
         type: file
         url: https://files.pythonhosted.org/packages/7b/5e/efd033ab7199a0b2044dab3b9f7a4f6670e6a52c089de572e928d2873b06/PyYAML-6.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
         sha256: d2b04aac4d386b172d5b9692e2d2da8de7bfb6c387fa4f801fbf6fb2e6ba4673
@@ -133,31 +143,31 @@ modules:
       - *id002
       - *id003
       - *id004
-      - &id024
+      - &id026
         type: file
-        url: https://files.pythonhosted.org/packages/47/8f/cf6683de320cf3873850ba48b7383db96958fe435b8e227db92119f6d867/huggingface_hub-0.21.3-py3-none-any.whl
-        sha256: b183144336fdf2810a8c109822e0bb6ef1fd61c65da6fb60e8c3f658b7144016
+        url: https://files.pythonhosted.org/packages/ab/28/d4b691840d73126d4c9845f8a22dad033ac872509b6d3a0d93b456eef424/huggingface_hub-0.21.4-py3-none-any.whl
+        sha256: df37c2c37fc6c82163cdd8a67ede261687d80d1e262526d6c0ce73b6b3630a7b
       - &id005
         type: file
         url: https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl
         sha256: c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f
-      - &id008
+      - &id006
         type: file
         url: https://files.pythonhosted.org/packages/ec/1a/610693ac4ee14fcdf2d9bf3c493370e4f2ef7ae2e19217d7a237ff42367d/packaging-23.2-py3-none-any.whl
         sha256: 8c491190033a9af7e1d931d0b5dacc2ef47509b34dd0de67ed209b5203fc88c7
-      - &id013
+      - &id019
         type: file
         url: https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl
         sha256: 58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f
-      - &id025
+      - &id027
         type: file
         url: https://files.pythonhosted.org/packages/2a/14/e75e52d521442e2fcc9f1df3c5e456aead034203d4797867980de558ab34/tqdm-4.66.2-py3-none-any.whl
         sha256: 1ee4f8a893eb9bef51c6e35730cebf234d5d0b6bd112b0271e10ed7c24a02bd9
-      - &id022
+      - &id028
         type: file
         url: https://files.pythonhosted.org/packages/24/21/7d397a4b7934ff4028987914ac1044d3b7d52712f30e2ac7a2ae5bc86dd0/typing_extensions-4.8.0-py3-none-any.whl
         sha256: 8f92fc8806f9a6b641eaa5318da32b44d401efaac0f6678c9bc448ba3605faa0
-      - &id014
+      - &id020
         type: file
         url: https://files.pythonhosted.org/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl
         sha256: 450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d
@@ -177,6 +187,24 @@ modules:
         --prefix=${FLATPAK_DEST} "idna==3.6" --no-build-isolation
     sources:
       - *id005
+  - name: python3-imageio
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "imageio==2.35.1" --no-build-isolation
+    sources:
+      - &id012
+        type: file
+        url: https://files.pythonhosted.org/packages/1e/b7/02adac4e42a691008b5cfb31db98c190e1fc348d1521b9be4429f9454ed1/imageio-2.35.1-py3-none-any.whl
+        sha256: 6eb2e5244e7a16b85c10b5c2fe0f7bf961b40fcb9f1a9fd1bd1d2c2f8fb3cd65
+      - &id008
+        type: file
+        url: https://files.pythonhosted.org/packages/5a/62/007b63f916aca1d27f5fede933fda3315d931ff9b2c28b9c2cf388cd8edb/numpy-1.26.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: f25e2811a9c932e43943a2615e65fc487a0b6b49218899e62e426e7f0a57eeda
+      - &id009
+        type: file
+        url: https://files.pythonhosted.org/packages/66/9c/2e1877630eb298bbfd23f90deeec0a3f682a4163d5ca9f178937de57346c/pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl
+        sha256: a086c2af425c5f62a65e12fbf385f7c9fcb8f107d0849dba5839461a129cf311
   - name: python3-jaconv
     buildsystem: simple
     build-commands:
@@ -192,14 +220,24 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "Jinja2==3.1.2" --no-build-isolation
     sources:
-      - &id015
-        type: file
+      - type: file
         url: https://files.pythonhosted.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl
         sha256: 6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61
-      - &id006
+      - &id007
         type: file
         url: https://files.pythonhosted.org/packages/97/18/c30da5e7a0e7f4603abfc6780574131221d9148f323752c2755d48abad30/MarkupSafe-2.1.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
         sha256: b91c037585eba9095565a3556f611e3cbfaa42ca1e865f7b8015fe5c7336d5a5
+  - name: python3-lazy_loader
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "lazy_loader==0.4" --no-build-isolation
+    sources:
+      - &id013
+        type: file
+        url: https://files.pythonhosted.org/packages/83/60/d497a310bde3f01cb805196ac61b7ad6dc5dcf8dce66634dc34364b20b4f/lazy_loader-0.4-py3-none-any.whl
+        sha256: 342aa8e14d543a154047afb4ba8ef17f5563baad3fc610d7b15b213b0f119efc
+      - *id006
   - name: python3-loguru
     buildsystem: simple
     build-commands:
@@ -215,14 +253,14 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "MarkupSafe==2.1.5" --no-build-isolation
     sources:
-      - *id006
+      - *id007
   - name: python3-mpmath
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "mpmath==1.3.0" --no-build-isolation
     sources:
-      - &id017
+      - &id024
         type: file
         url: https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl
         sha256: a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c
@@ -241,7 +279,7 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "networkx==3.2.1" --no-build-isolation
     sources:
-      - &id018
+      - &id014
         type: file
         url: https://files.pythonhosted.org/packages/d5/f0/8fbc882ca80cf077f1b246c0e3c3465f7f415439bdea6b899f6b19f61f70/networkx-3.2.1-py3-none-any.whl
         sha256: f18c69adc97877c42332c170849c96cefa91881c99a7cb3e95b7c659ebdc1ec2
@@ -251,38 +289,31 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "numpy==1.26.3" --no-build-isolation
     sources:
-      - &id007
-        type: file
-        url: https://files.pythonhosted.org/packages/5a/62/007b63f916aca1d27f5fede933fda3315d931ff9b2c28b9c2cf388cd8edb/numpy-1.26.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-        sha256: f25e2811a9c932e43943a2615e65fc487a0b6b49218899e62e426e7f0a57eeda
+      - *id008
   - name: python3-opencv-python
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "opencv-python==4.9.0.80" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "opencv-python==4.10.0.84" --no-build-isolation
     sources:
-      - *id007
-      - &id019
-        type: file
-        url: https://files.pythonhosted.org/packages/d9/64/7fdfb9386511cd6805451e012c537073a79a958a58795c4e602e538c388c/opencv_python-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-        sha256: e4088cab82b66a3b37ffc452976b14a3c599269c247895ae9ceb4066d8188a57
+      - *id008
+      - type: file
+        url: https://files.pythonhosted.org/packages/3f/a4/d2537f47fd7fcfba966bd806e3ec18e7ee1681056d4b0a9c8d983983e4d5/opencv_python-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: 9ace140fc6d647fbe1c692bcb2abce768973491222c067c131d80957c595b71f
   - name: python3-packaging
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "packaging==23.2" --no-build-isolation
     sources:
-      - *id008
+      - *id006
   - name: python3-pillow
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "pillow==10.2.0" --no-build-isolation
     sources:
-      - &id020
-        type: file
-        url: https://files.pythonhosted.org/packages/66/9c/2e1877630eb298bbfd23f90deeec0a3f682a4163d5ca9f178937de57346c/pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl
-        sha256: a086c2af425c5f62a65e12fbf385f7c9fcb8f107d0849dba5839461a129cf311
+      - *id009
   - name: python3-prettytable
     buildsystem: simple
     build-commands:
@@ -292,10 +323,42 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/3d/c4/a32f4bf44faf95accbbd5d7864ddef9e289749a8efbc3adaad4a4671779a/prettytable-3.10.0-py3-none-any.whl
         sha256: 6536efaf0757fdaa7d22e78b3aac3b69ea1b7200538c2c6995d649365bddab92
-      - &id029
+      - &id032
         type: file
         url: https://files.pythonhosted.org/packages/fd/84/fd2ba7aafacbad3c4201d395674fc6348826569da3c0937e75505ead3528/wcwidth-0.2.13-py2.py3-none-any.whl
         sha256: 3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859
+  - name: python3-psd-tools
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "psd-tools==1.10.0" --no-build-isolation
+    sources:
+      - *id010
+      - *id011
+      - type: file
+        url: https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz
+        sha256: 49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491
+      - *id012
+      - *id013
+      - *id014
+      - *id008
+      - *id006
+      - *id009
+      - type: file
+        url: https://files.pythonhosted.org/packages/23/cc/3c0e84320107bdcbf5290eaa9b886896f82bf8d0001fa597043fb6e56578/psd_tools-1.10.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: 946039d5553cfbc90bd34f51886933b4abec7dd4c39609afbff197892dc5c0ec
+      - &id021
+        type: file
+        url: https://files.pythonhosted.org/packages/ad/96/138484302b8ec9a69cdf65e8d4ab47a640a3b1a8ea3c437e1da3e1a5a6b8/scikit_image-0.24.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: fa27b3a0dbad807b966b8db2d78da734cb812ca4787f7fbb143764800ce2fa9c
+      - &id022
+        type: file
+        url: https://files.pythonhosted.org/packages/d4/b8/7169935f9a2ea9e274ad8c21d6133d492079e6ebc3fc69a915c2375616b0/scipy-1.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: 8b8066bce124ee5531d12a74b617d9ac0ea59245246410e19bca549656d9a40a
+      - &id023
+        type: file
+        url: https://files.pythonhosted.org/packages/cd/0b/33610b4d0d1bb83a6bfd20ed838f52e02a44e9b439116cd4f3d424e81a80/tifffile-2024.2.12-py3-none-any.whl
+        sha256: 870998f82fbc94ff7c3528884c1b0ae54863504ff51dbebea431ac3fa8fb7c21
   - name: python3-psutil
     buildsystem: simple
     build-commands:
@@ -327,40 +390,51 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "PySide6==6.6.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "PySide6==6.7.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/c0/55/1147925dd2fcda54d3ec8dab17bf7bb2df796f818d2d168d43f11f599adc/PySide6-6.6.2-cp38-abi3-manylinux_2_28_x86_64.whl
-        sha256: 3b6266fb29bab66526f2bbab2a6610f9f47a4df42ae6fb3713cd8329f593a561
-      - &id009
+        url: https://files.pythonhosted.org/packages/34/a6/278c7ed2f76ccfa471c49eb66538243dc0d892fe481b9b6a8bbad8846ba0/PySide6-6.7.2-cp39-abi3-manylinux_2_28_x86_64.whl
+        sha256: 15e7696a09072ee977f6e6179ab1e48184953df8417bcaa83cfadf0b79747242
+      - &id015
         type: file
-        url: https://files.pythonhosted.org/packages/e8/85/ea68800a6fe010f12efba704a3304b9121c2bf43cb9b0fa9d2b3cf8ddf46/PySide6_Addons-6.6.2-cp38-abi3-manylinux_2_28_x86_64.whl
-        sha256: cbdb7393de88a916ed1e9bd8407149f911717d1e06aee04119e26042679d8cce
-      - &id010
+        url: https://files.pythonhosted.org/packages/7f/f2/2128d3876f0c45fcb73000b272be64e1f3b1189f77d79820d7a706051e55/PySide6_Addons-6.7.2-cp39-abi3-manylinux_2_28_x86_64.whl
+        sha256: 94b9bf6a2a4a7ac671e1776633e50d51326c86f4184f1c6e556f4dd5498fd52a
+      - &id016
         type: file
-        url: https://files.pythonhosted.org/packages/db/3b/47dcab3f7a0c4c637d0c8dceabc81aadb3a5e8d8b28c9fcfb8fde3e840f3/PySide6_Essentials-6.6.2-cp38-abi3-manylinux_2_28_x86_64.whl
-        sha256: 90be2cf1a404f1c62777ccc6898895c864376f1fd68ae9f82f7622522bce5814
-      - &id011
+        url: https://files.pythonhosted.org/packages/75/be/527e41a7744142d931e46685dd9c2bdfff39432962abf8a5263be319c2cb/PySide6_Essentials-6.7.2-cp39-abi3-manylinux_2_28_x86_64.whl
+        sha256: a1a4c09f1e916b9cfe53151fe4a503a6acb1f6621ba28204d1bfe636f80d6780
+      - &id017
         type: file
-        url: https://files.pythonhosted.org/packages/52/cd/c8c88de4987e4740bf96f6ddb77432add3ea3090c258cc31eed9580523b1/shiboken6-6.6.2-cp38-abi3-manylinux_2_28_x86_64.whl
-        sha256: 9da86622cee5e7201bafe9c5beee3c06d9168c6b8f3e2fac52c1b7df00956bff
+        url: https://files.pythonhosted.org/packages/57/ba/3e38bb62b285d73e46a86f44e7765cea5c42a79b0bba867dfabbdd12b54d/shiboken6-6.7.2-cp39-abi3-manylinux_2_28_x86_64.whl
+        sha256: 70e80737b27cd5d83504b373013b55e70462bd4a27217d919ff9a83958731990
   - name: python3-PySide6_Addons
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "PySide6_Addons==6.6.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "PySide6_Addons==6.7.2" --no-build-isolation
     sources:
-      - *id009
-      - *id010
-      - *id011
+      - *id015
+      - *id016
+      - *id017
   - name: python3-PySide6_Essentials
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "PySide6_Essentials==6.6.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "PySide6_Essentials==6.7.2" --no-build-isolation
     sources:
-      - *id010
-      - *id011
+      - *id016
+      - *id017
+  - name: python3-pytesseract
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pytesseract==0.3.10" --no-build-isolation
+    sources:
+      - *id006
+      - *id009
+      - type: file
+        url: https://files.pythonhosted.org/packages/c5/54/ec007336f38d2d4ce61f3544af3e6855dacbf04a1ac8294f10cabe81146f/pytesseract-0.3.10-py3-none-any.whl
+        sha256: 8f22cc98f765bf13517ead0c70effedb46c153540d25783e04014f28b55a5fc6
   - name: python3-python-magic
     buildsystem: simple
     build-commands:
@@ -376,14 +450,14 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "PyYAML==6.0.1" --no-build-isolation
     sources:
-      - *id012
+      - *id018
   - name: python3-regex
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "regex==2023.12.25" --no-build-isolation
     sources:
-      - &id026
+      - &id029
         type: file
         url: https://files.pythonhosted.org/packages/8d/6b/2f6478814954c07c04ba60b78d688d3d7bab10d786e0b6c1db607e4f6673/regex-2023.12.25-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
         sha256: f72cbae7f6b01591f90814250e636065850c5926751af02bb48da94dfced7baa
@@ -396,35 +470,48 @@ modules:
       - *id001
       - *id002
       - *id005
-      - *id013
-      - *id014
+      - *id019
+      - *id020
   - name: python3-safetensors
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "safetensors==0.4.2" --no-build-isolation
     sources:
-      - &id027
+      - &id030
         type: file
         url: https://files.pythonhosted.org/packages/8e/cf/b32d236cc01429bf2827bd1d8d81fa5a34a6cc7fb3499506f5d1aa19dcb8/safetensors-0.4.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
         sha256: 02697f8f2be8ca3c37a4958702dbdb1864447ef765e18b5328a1617022dcf164
+  - name: python3-scikit-image
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "scikit-image==0.24.0" --no-build-isolation
+    sources:
+      - *id012
+      - *id013
+      - *id014
+      - *id008
+      - *id006
+      - *id009
+      - *id021
+      - *id022
+      - *id023
   - name: python3-scipy
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "scipy==1.12.0" --no-build-isolation
     sources:
-      - *id007
-      - type: file
-        url: https://files.pythonhosted.org/packages/d4/b8/7169935f9a2ea9e274ad8c21d6133d492079e6ebc3fc69a915c2375616b0/scipy-1.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-        sha256: 8b8066bce124ee5531d12a74b617d9ac0ea59245246410e19bca549656d9a40a
+      - *id008
+      - *id022
   - name: python3-shapely
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "shapely==2.0.3" --no-build-isolation
     sources:
-      - *id007
+      - *id008
       - type: file
         url: https://files.pythonhosted.org/packages/0d/8f/4d3df127beac22a1fb9bcf9783d75550af805290476a29277c72494dcf73/shapely-2.0.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
         sha256: 13cb37d3826972a82748a450328fe02a931dcaed10e69a4d83cc20ba021bc85f
@@ -432,16 +519,16 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "shiboken6==6.6.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "shiboken6==6.7.2" --no-build-isolation
     sources:
-      - *id011
+      - *id017
   - name: python3-sympy
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "sympy==1.12" --no-build-isolation
     sources:
-      - *id017
+      - *id024
       - type: file
         url: https://files.pythonhosted.org/packages/d2/05/e6600db80270777c4a64238a98d442f0fd07cc8915be2a1c16da7f2b9e74/sympy-1.12-py3-none-any.whl
         sha256: c3588cd4295d0c0f603d0f2ae780587e64e2efeedb3521e46b9bb1d08d184fa5
@@ -451,78 +538,76 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "termcolor==2.4.0" --no-build-isolation
     sources:
-      - *id021
+      - *id025
   - name: python3-tifffile
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "tifffile==2024.2.12" --no-build-isolation
     sources:
-      - *id007
-      - type: file
-        url: https://files.pythonhosted.org/packages/cd/0b/33610b4d0d1bb83a6bfd20ed838f52e02a44e9b439116cd4f3d424e81a80/tifffile-2024.2.12-py3-none-any.whl
-        sha256: 870998f82fbc94ff7c3528884c1b0ae54863504ff51dbebea431ac3fa8fb7c21
+      - *id008
+      - *id023
   - name: python3-tokenizers
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "tokenizers==0.15.2" --no-build-isolation
     sources:
-      - *id012
+      - *id018
       - *id001
       - *id002
       - *id003
       - *id004
-      - *id024
+      - *id026
       - *id005
-      - *id008
-      - *id013
-      - &id028
+      - *id006
+      - *id019
+      - &id031
         type: file
         url: https://files.pythonhosted.org/packages/15/0b/c09b2c0dc688c82adadaa0d5080983de3ce920f4a5cbadb7eaa5302ad251/tokenizers-0.15.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
         sha256: ccd73a82751c523b3fc31ff8194702e4af4db21dc20e55b30ecc2079c5d43cb7
-      - *id025
-      - *id022
-      - *id014
+      - *id027
+      - *id028
+      - *id020
   - name: python3-tqdm
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "tqdm==4.66.2" --no-build-isolation
     sources:
-      - *id025
+      - *id027
   - name: python3-transformers
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "transformers==4.38.2" --no-build-isolation
     sources:
-      - *id012
+      - *id018
       - *id001
       - *id002
       - *id003
       - *id004
-      - *id024
-      - *id005
-      - *id007
-      - *id008
       - *id026
-      - *id013
+      - *id005
+      - *id008
+      - *id006
+      - *id029
+      - *id019
+      - *id030
+      - *id031
       - *id027
-      - *id028
-      - *id025
       - type: file
         url: https://files.pythonhosted.org/packages/b6/4d/fbe6d89fde59d8107f0a02816c4ac4542a8f9a85559fdf33c68282affcc1/transformers-4.38.2-py3-none-any.whl
         sha256: c4029cb9f01b3dd335e52f364c52d2b37c65b4c78e02e6a08b1919c5c928573e
-      - *id022
-      - *id014
+      - *id028
+      - *id020
   - name: python3-typing_extensions
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "typing_extensions==4.8.0" --no-build-isolation
     sources:
-      - *id022
+      - *id028
   - name: python3-unidic-lite
     buildsystem: simple
     build-commands:
@@ -538,14 +623,14 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "urllib3==2.2.1" --no-build-isolation
     sources:
-      - *id014
+      - *id020
   - name: python3-wcwidth
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "wcwidth==0.2.13" --no-build-isolation
     sources:
-      - *id029
+      - *id032
   - name: python3-xdg
     buildsystem: simple
     build-commands:
