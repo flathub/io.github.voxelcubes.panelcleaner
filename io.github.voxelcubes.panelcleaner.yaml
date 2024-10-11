@@ -30,8 +30,8 @@ modules:
         url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/ad2c151391fc453f81950ee276c8c0a29c4c12ea/icons/logo-big.png
         sha256: 6857751309097eee458ff23181295eabfb1295606df8050f5ce1a9fd4560ec04
       - type: file
-        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/ad2c151391fc453f81950ee276c8c0a29c4c12ea/flatpak/io.github.voxelcubes.panelcleaner.appdata.xml
-        sha256: c6de919cf3e74ec9d2dce0d99d79f88f4a788a96f68903991a30d26a70f6b01e
+        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/1a0fdb3bb77021c2b459d2131ef4a406cccffc7f/flatpak/io.github.voxelcubes.panelcleaner.appdata.xml
+        sha256: 9a9287f707b3d1dc8966efd06a6b2ac4747f20d35c83a3bb3126c4db914e41d4
     post-install:
       - install -Dm644 PanelCleaner.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 logo-big.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
