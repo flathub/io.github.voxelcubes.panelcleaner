@@ -18,13 +18,10 @@ run:
 
 lint:
 	flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest $(ID).yaml
-	flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
+	flatpak run --command=flatpak-builder-lint org.flatpak.Builder --exceptions repo repo
 
 clean:
 	rm -rf builddir repo panelcleaner.flatpak .flatpak-builder
 
 introspect:
 	flatpak run --command=sh --devel $(ID)
-
-check-metadata:
-	flatpak run --command=flatpak-builder-lint org.flatpak.Builder --exceptions repo repo
