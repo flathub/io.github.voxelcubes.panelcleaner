@@ -386,44 +386,6 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/a7/2c/4c64579f847bd5d539803c8b909e54ba087a79d01bb3aba433a95879a6c5/pyperclip-1.8.2.tar.gz
         sha256: 105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57
-  - name: python3-PySide6
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "PySide6==6.7.2" --no-build-isolation
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/34/a6/278c7ed2f76ccfa471c49eb66538243dc0d892fe481b9b6a8bbad8846ba0/PySide6-6.7.2-cp39-abi3-manylinux_2_28_x86_64.whl
-        sha256: 15e7696a09072ee977f6e6179ab1e48184953df8417bcaa83cfadf0b79747242
-      - &id015
-        type: file
-        url: https://files.pythonhosted.org/packages/7f/f2/2128d3876f0c45fcb73000b272be64e1f3b1189f77d79820d7a706051e55/PySide6_Addons-6.7.2-cp39-abi3-manylinux_2_28_x86_64.whl
-        sha256: 94b9bf6a2a4a7ac671e1776633e50d51326c86f4184f1c6e556f4dd5498fd52a
-      - &id016
-        type: file
-        url: https://files.pythonhosted.org/packages/75/be/527e41a7744142d931e46685dd9c2bdfff39432962abf8a5263be319c2cb/PySide6_Essentials-6.7.2-cp39-abi3-manylinux_2_28_x86_64.whl
-        sha256: a1a4c09f1e916b9cfe53151fe4a503a6acb1f6621ba28204d1bfe636f80d6780
-      - &id017
-        type: file
-        url: https://files.pythonhosted.org/packages/57/ba/3e38bb62b285d73e46a86f44e7765cea5c42a79b0bba867dfabbdd12b54d/shiboken6-6.7.2-cp39-abi3-manylinux_2_28_x86_64.whl
-        sha256: 70e80737b27cd5d83504b373013b55e70462bd4a27217d919ff9a83958731990
-  - name: python3-PySide6_Addons
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "PySide6_Addons==6.7.2" --no-build-isolation
-    sources:
-      - *id015
-      - *id016
-      - *id017
-  - name: python3-PySide6_Essentials
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "PySide6_Essentials==6.7.2" --no-build-isolation
-    sources:
-      - *id016
-      - *id017
   - name: python3-pytesseract
     buildsystem: simple
     build-commands:
@@ -506,13 +468,6 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/0d/8f/4d3df127beac22a1fb9bcf9783d75550af805290476a29277c72494dcf73/shapely-2.0.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
         sha256: 13cb37d3826972a82748a450328fe02a931dcaed10e69a4d83cc20ba021bc85f
-  - name: python3-shiboken6
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "shiboken6==6.7.2" --no-build-isolation
-    sources:
-      - *id017
   - name: python3-sympy
     buildsystem: simple
     build-commands:
