@@ -25,3 +25,6 @@ clean:
 
 introspect:
 	flatpak run --command=sh --devel $(ID)
+
+check-metadata:
+	flatpak run --command=flatpak-builder-lint org.flatpak.Builder --exceptions repo repo
