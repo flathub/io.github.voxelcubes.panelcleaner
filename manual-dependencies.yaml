@@ -6,23 +6,23 @@ modules:
     buildsystem: simple
     build-commands:
       # This retarded `mv` to fix the punycode took me several hours to figure out, considering it worked in the previous version. PIP must've changed. fml
-      - mv torch-2.2.1%2Bcpu-cp311-cp311-linux_x86_64.whl torch-2.2.1+cpu-cp311-cp311-linux_x86_64.whl
+      - mv torch-2.12.0%2Bcpu-cp313-cp313-manylinux_2_28_x86_64.whl torch-2.12.0+cpu-cp313-cp313-manylinux_2_28_x86_64.whl
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "torch==2.2.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "torch==2.12.0" --no-build-isolation
     sources:
       - type: file
-        url: https://download.pytorch.org/whl/cpu/torch-2.2.1%2Bcpu-cp311-cp311-linux_x86_64.whl
-        sha256: 6bc973d5632374b92b4b293817b4d2ff8c8ce1c784c748b471dba1fffcd9c333
+        url: https://download-r2.pytorch.org/whl/cpu/torch-2.12.0%2Bcpu-cp313-cp313-manylinux_2_28_x86_64.whl
+        sha256: ada78018bdfa30d1c766596cd32d910dbf5b03424cd859231b6d2a00533de922
   - name: python3-torchvision
     buildsystem: simple
     build-commands:
-      - mv torchvision-0.17.1%2Bcpu-cp311-cp311-linux_x86_64.whl torchvision-0.17.1+cpu-cp311-cp311-linux_x86_64.whl
+      - mv torchvision-0.27.0%2Bcpu-cp313-cp313-manylinux_2_28_x86_64.whl torchvision-0.27.0+cpu-cp313-cp313-manylinux_2_28_x86_64.whl
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "torchvision==0.17.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "torchvision==0.27.0" --no-build-isolation
     sources:
       - type: file
-        url: https://download.pytorch.org/whl/cpu/torchvision-0.17.1%2Bcpu-cp311-cp311-linux_x86_64.whl
-        sha256: 7dbe91c25cec4444729f8d73109b661be2a0df68c6dccd6d42b0c38653caafd2
+        url: https://download-r2.pytorch.org/whl/cpu/torchvision-0.27.0%2Bcpu-cp313-cp313-manylinux_2_28_x86_64.whl
+        sha256: ba77816bbde883c0c2075a1e284cf2e6f324472d4523442f5e3ae0812a98ae1e
   - name: python3-manga-ocr
     buildsystem: simple
     build-commands:
@@ -30,15 +30,17 @@ modules:
         --prefix=${FLATPAK_DEST} "manga-ocr" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/08/77/97416057713f3d894da2d052135806f32b929601fda94c72034b753ca07c/manga_ocr-0.1.11-py3-none-any.whl
-        sha256: 3e9a0373de1c9e1b6e5a34206ffe7c4c1b5823f2ba456143754e3e722c4b87a9
+        url: https://files.pythonhosted.org/packages/90/87/d211ff9c2516f3c7ea0da661fcac1dde23d90a4626432e140c88428a3bdb/manga_ocr-0.1.15-py3-none-any.whl
+        sha256: a4ac58950c26bdf13f31ed4578724121232020b10b529a9a9d3cf5d7d492d899
+  # This old-ass package wants an old-ass numpy but it works fine on newer versions, so telling to shut up about
+  # its dependencies with --no-deps.
   - name: python3-simple-lama-inpainting
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "simple-lama-inpainting==0.1.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "simple-lama-inpainting==0.1.2" --no-build-isolation --no-deps
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/bd/d5/36bb9e952628f08ef78c9d45795fceb15a94841a45eb6a758d7407cf3cc9/simple_lama_inpainting-0.1.1-py3-none-any.whl
-        sha256: 46a537f56fed9e42b32186e5708f9ca62c4e06ffd20239e7b17eb1ddbd476b9a
+        url: https://files.pythonhosted.org/packages/4b/28/6f2f546247c122bfbde4050bb25f794dd0c413ea0a23b26727c41beed76b/simple_lama_inpainting-0.1.2-py3-none-any.whl
+        sha256: f8990e75d8c97dc40ccade133cc6fa1021069d9638708080c27dfcf22cf39bfb
 name: manual-dependencies
