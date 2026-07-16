@@ -35,8 +35,8 @@ modules:
         url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/ad2c151391fc453f81950ee276c8c0a29c4c12ea/icons/logo-big.png
         sha256: 6857751309097eee458ff23181295eabfb1295606df8050f5ce1a9fd4560ec04
       - type: file
-        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/a6fbe2314b9be5054a9355217a1bf6bf4b3d7548/flatpak/io.github.voxelcubes.panelcleaner.appdata.xml
-        sha256: 631792f56af795b8be85b01f1b7eb5d0d82f3072ec795e372db2b1f2b2e371f6
+        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/0afa21fd6caab5bee0ab8ef51a5a19fc4bd9dda3/flatpak/io.github.voxelcubes.panelcleaner.appdata.xml
+        sha256: a55614782faae6e2b6416fbd7a0edbd7977c07e9628f2b80086553cfc707064e
 cleanup:
   - /lib/python3.13/site-packages/nvidia*
 cleanup-commands:
