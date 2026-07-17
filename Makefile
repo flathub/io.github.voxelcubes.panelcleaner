@@ -8,7 +8,7 @@ ID := io.github.voxelcubes.panelcleaner
 
 
 generate-dependencies:
-	python flatpak-pip-generator-fix --runtime='org.kde.Sdk//6.7' --yaml --output pypi-dependencies --requirements-file='requirements.txt'
+	python flatpak-pip-generator-fix --runtime='org.kde.Sdk//6.10' --yaml --output pypi-dependencies --requirements-file='requirements.txt'
 
 build-install:
 	flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/repo/screenshots --repo=repo builddir $(ID).yaml
@@ -18,13 +18,10 @@ run:
 
 lint:
 	flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest $(ID).yaml
-	flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
+	flatpak run --command=flatpak-builder-lint org.flatpak.Builder --exceptions repo repo
 
 clean:
 	rm -rf builddir repo panelcleaner.flatpak .flatpak-builder
 
 introspect:
 	flatpak run --command=sh --devel $(ID)
-
-check-metadata:
-	flatpak run --command=flatpak-builder-lint org.flatpak.Builder --exceptions repo repo

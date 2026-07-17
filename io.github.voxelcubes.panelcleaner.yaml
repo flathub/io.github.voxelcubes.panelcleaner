@@ -1,9 +1,9 @@
 id: io.github.voxelcubes.panelcleaner
 runtime: org.kde.Platform
-runtime-version: '6.7'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 base: io.qt.PySide.BaseApp
-base-version: 6.7
+base-version: '6.10'
 command: pcleaner-gui
 finish-args:
   - --share=ipc
@@ -20,11 +20,14 @@ modules:
     build-commands:
       - pip3 install --no-index --no-dependencies --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} pcleaner --no-build-isolation
       - desktop-file-edit --set-icon=${FLATPAK_ID} PanelCleaner.desktop
+      - install -Dm644 PanelCleaner.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 logo-big.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
+      - install -Dm644 ${FLATPAK_ID}.appdata.xml /app/share/metainfo/${FLATPAK_ID}.appdata.xml
     sources:
-        # tag: '2.11.5'
+        # tag: '2.11.11'
       - type: file
-        url: https://files.pythonhosted.org/packages/e7/3f/0f23248c309a7fdd13ed658fbe64bb5253101467bd5568a7a6d261fc5710/pcleaner-2.11.5-py3-none-any.whl
-        sha256: 028e3d550bcac9fb97634293837b09134f8ea0372dd7b75f74ba487c73ebc00d
+        url: https://files.pythonhosted.org/packages/10/1c/881c7351d700061397884b5cdbb832c29daef81723d3f7b8b993df8ac29c/pcleaner-2.11.11-py3-none-any.whl
+        sha256: e8735c803788a8b15f39d692a2266fe9d157476b71006112b6ed7e7726c31225
       - type: file
         url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/ad2c151391fc453f81950ee276c8c0a29c4c12ea/PanelCleaner.desktop
         sha256: 8339f19cd19c12ca8a2446087289807695b91dd47ccdeee26d1d88d2caab9039 
@@ -32,13 +35,9 @@ modules:
         url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/ad2c151391fc453f81950ee276c8c0a29c4c12ea/icons/logo-big.png
         sha256: 6857751309097eee458ff23181295eabfb1295606df8050f5ce1a9fd4560ec04
       - type: file
-        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/a6fbe2314b9be5054a9355217a1bf6bf4b3d7548/flatpak/io.github.voxelcubes.panelcleaner.appdata.xml
-        sha256: 631792f56af795b8be85b01f1b7eb5d0d82f3072ec795e372db2b1f2b2e371f6
-    post-install:
-      - install -Dm644 PanelCleaner.desktop /app/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm644 logo-big.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
-      - install -Dm644 ${FLATPAK_ID}.appdata.xml /app/share/metainfo/${FLATPAK_ID}.appdata.xml
+        url: https://raw.githubusercontent.com/VoxelCubes/PanelCleaner/0afa21fd6caab5bee0ab8ef51a5a19fc4bd9dda3/flatpak/io.github.voxelcubes.panelcleaner.appdata.xml
+        sha256: a55614782faae6e2b6416fbd7a0edbd7977c07e9628f2b80086553cfc707064e
 cleanup:
-  - /lib/python3.11/site-packages/nvidia*
+  - /lib/python3.13/site-packages/nvidia*
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
